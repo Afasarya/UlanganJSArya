@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Luas Segitiga</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #743ad5, #d53a9d);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            width: 300px;
+            text-align: center;
+        }
+
+        .container h1 {
+            color: #743ad5;
+        }
+
+        .container input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .container button {
+            background: #743ad5;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .container button:hover {
+            background: #5a2d99;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Luas Segitiga</h1>
+        <input type="text" id="alasInput" placeholder="Masukkan alas">
+        <input type="text" id="tinggiInput" placeholder="Masukkan tinggi">
+        <p>Luas Segitiga: <span id="luasSegitiga"></span></p>
+        <button onclick="hitungLuas()">Hitung</button>
+    </div>
+
+    <script>
+        function hitungLuas() {
+            var alas = parseFloat(document.getElementById("alasInput").value);
+            var tinggi = parseFloat(document.getElementById("tinggiInput").value);
+            var luasSegitiga = 0.5 * alas * tinggi;
+            var luasSegitigaElement = document.getElementById("luasSegitiga");
+            luasSegitigaElement.textContent = luasSegitiga;
+        }
+    </script>
+</body>
+</html>

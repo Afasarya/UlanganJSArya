@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Operasi Aritmatika Dasar</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #743ad5, #d53a9d);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            width: 300px;
+            text-align: center;
+        }
+
+        .container h1 {
+            color: #743ad5;
+        }
+
+        .container input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .container button {
+            background: #743ad5;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .container button:hover {
+            background: #5a2d99;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Operasi Aritmatika Dasar</h1>
+        <input type="text" id="angka1" placeholder="Angka 1">
+        <input type="text" id="angka2" placeholder="Angka 2">
+        <p id="result"></p>
+        <button onclick="hitung()">Hitung</button>
+    </div>
+
+    <script>
+        function hitung() {
+            var angka1 = parseFloat(document.getElementById("angka1").value);
+            var angka2 = parseFloat(document.getElementById("angka2").value);
+            var resultElement = document.getElementById("result");
+
+            var tambah = angka1 + angka2;
+            var kurang = angka1 - angka2;
+            var kali = angka1 * angka2;
+            var bagi = angka1 / angka2;
+            var pangkat = Math.pow(angka1, angka2);
+            var modulus = angka1 % angka2;
+
+            resultElement.innerHTML = "Hasil Pertambahan: " + tambah + "<br>";
+            resultElement.innerHTML += "Hasil Pengurangan: " + kurang + "<br>";
+            resultElement.innerHTML += "Hasil Perkalian: " + kali + "<br>";
+            resultElement.innerHTML += "Hasil Pembagian: " + bagi + "<br>";
+            resultElement.innerHTML += "Hasil Pemangkatan: " + pangkat + "<br>";
+            resultElement.innerHTML += "Hasil Modulus: " + modulus;
+        }
+    </script>
+</body>
+</html>

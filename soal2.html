@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Luas Persegi Panjang</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #743ad5, #d53a9d);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            width: 300px;
+            text-align: center;
+        }
+
+        .container h1 {
+            color: #743ad5;
+        }
+
+        .container button {
+            background: #743ad5;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .container button:hover {
+            background: #5a2d99;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Luas Persegi Panjang</h1>
+        <p>Panjang: 10</p>
+        <p>Lebar: 5</p>
+        <p>Luas Persegi Panjang: <span id="luasPersegiPanjang"></span></p>
+        <button onclick="hitungLuas()">Hitung</button>
+    </div>
+
+    <script>
+        function hitungLuas() {
+            var panjang = 10;
+            var lebar = 5;
+            var luasPersegiPanjang = panjang * lebar;
+            var luasPersegiPanjangElement = document.getElementById("luasPersegiPanjang");
+            luasPersegiPanjangElement.textContent = luasPersegiPanjang;
+        }
+    </script>
+</body>
+</html>
